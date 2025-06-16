@@ -6,6 +6,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
 </head>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
 <body>
     <!-- Header Section -->
      <header class="sticky top-0 bg-white shadow-md">
@@ -13,14 +18,28 @@
             <div class="text-2xl font-bold text-blue-600">
                 Event Logo
             </div>
+            <button id="menu-btn" class="md:hidden text-3xl focus:outline-none">
+                &#9776;
+            </button>
             <nav class="hidden md:flex gap-6">
                 <a href="#details" class="hover:text-blue-500">Details</a>
                 <a href="#speakers" class="hover:text-blue-500">Speakers</a>
                 <a href="#schedule" class="hover:text-blue-500">Schedule</a>
-                <a href="#register" class="hover:text-blue-500">Register</a>
+                <a href="#registration" class="hover:text-blue-500">Register</a>
                 <a href="#faq" class="hover:text-blue-500">FAQ</a>
             </nav>
+
         </div>
+        <nav
+            id="menu"
+            class="hidden fixed  w-full h-screen bg-white flex flex-col items-center justify-center text-center z-40 md:hidden"
+            >
+                <a href="#details" class="py-4 text-lg hover:text-blue-500">Details</a>
+                <a href="#speakers" class="py-4 text-lg hover:text-blue-500">Speakers</a>
+                <a href="#schedule" class="py-4 text-lg hover:text-blue-500">Schedule</a>
+                <a href="#registration" class="py-4 text-lg hover:text-blue-500">Register</a>
+                <a href="#faq" class="py-4 text-lg hover:text-blue-500">FAQ</a>
+            </nav>
      </header>
 
     <!-- Hero Section -->
@@ -33,6 +52,7 @@
         <a href="" class="w-[30%] mx-auto bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full transition">
             Register Now
         </a>
+        <div id="countdown" class="mt-4 text-lg"></div>
     </section>
 
     <!-- Event Details Section -->
@@ -81,5 +101,131 @@
         </div>
      </section>
 
+     <!-- Schedule Section -->
+    <section id="schedule" class="py-16 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-center">Event Schedule</h2>
+            <div class="overflow-x-auto">
+            <table class="min-w-full bg-white rounded-lg overflow-hidden shadow">
+                <thead>
+                    <tr class="bg-blue-100 text-left">
+                        <th class="py-3 px-4">Time</th>
+                         <th class="py-3 px-4">Topic</th>
+                        <th class="py-3 px-4">Speaker</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4">10:00 AM</td>
+                        <td class="py-2 px-4">Opening Keynote</td>
+                        <td class="py-2 px-4">John Doe</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">11:00 AM</td>
+                        <td class="py-2 px-4">Inaugration</td>
+                        <td class="py-2 px-4">Katty</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">01:00 AM</td>
+                        <td class="py-2 px-4">Grand Party</td>
+                        <td class="py-2 px-4">Alex</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">02:00 AM</td>
+                        <td class="py-2 px-4">DJ Chitas</td>
+                        <td class="py-2 px-4">William</td>
+                    </tr>
+                 </tbody>
+            </table>
+        </div>
+    </div>
+    </section>
+
+     <!-- Registration Section -->
+     <section id="registration" class="py-16 bg-fixed bg-center bg-cover" style="background-image: url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg');">
+        <div class="bg-opacity-90 max-w-md mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-center">Register Now</h2>
+            <form class="bg-white p-6 space-y-4 rounded-lg shadow">
+                  <input type="text" placeholder="Name" class="w-full border p-2 rounded" />
+                  <input type="email" placeholder="Email" class="w-full border p-2 rounded" />
+                  <textarea placeholder="Message or Comments" class="w-full border p-2 rounded"></textarea>
+                  <button class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition">Submit</button>
+            </form> 
+        </div>
+     </section>
+
+     <!-- FAQ Section -->
+      <section class="py-16 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-8 text-center">
+                Frequently Asked Questions
+            </h2>
+            <div class="space-y-4">
+                <details class="bg-white p-4 rounded shadow">
+                    <summary class="cursor-pointer font-semibold">
+                        What is the event format?
+                    </summary>
+                    <p class="mt-2 text-gray-600">It's a hybrid event with both in-person and virtual sessions.</p>
+                </details>
+                <details class="bg-white p-4 rounded shadow">
+                    <summary class="cursor-pointer font-semibold">
+                        What is the event format?
+                    </summary>
+                    <p class="mt-2 text-gray-600">It's a hybrid event with both in-person and virtual sessions.</p>
+                </details>
+                <details class="bg-white p-4 rounded shadow">
+                    <summary class="cursor-pointer font-semibold">
+                        What is the event format?
+                    </summary>
+                    <p class="mt-2 text-gray-600">It's a hybrid event with both in-person and virtual sessions.</p>
+                </details>
+                <details class="bg-white p-4 rounded shadow">
+                    <summary class="cursor-pointer font-semibold">
+                        What is the event format?
+                    </summary>
+                    <p class="mt-2 text-gray-600">It's a hybrid event with both in-person and virtual sessions.</p>
+                </details>
+            </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="faq" class="bg-white border-t py-6 text-center text-sm text-gray-600">
+        <div class="space-x-4">
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <p class="mt-2">&copy; 2025 Event Name. All rights reserved.</p>
+      </footer>
+
+      <script>
+    const countdown = document.getElementById('countdown');
+    const eventDate = new Date("2025-07-20T09:00:00").getTime();
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance < 0) {
+        countdown.innerText = "The event is happening now!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
+    }, 1000);
+
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
