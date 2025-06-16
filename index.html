@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header Section -->
+     <header class="sticky top-0 bg-white shadow-md">
+        <div class="flex item-centers justify-between p-4 max-w-7xl">
+            <div class="text-2xl font-bold text-blue-600">
+                Event Logo
+            </div>
+            <nav class="hidden md:flex gap-6">
+                <a href="#details" class="hover:text-blue-500">Details</a>
+                <a href="#speakers" class="hover:text-blue-500">Speakers</a>
+                <a href="#schedule" class="hover:text-blue-500">Schedule</a>
+                <a href="#register" class="hover:text-blue-500">Register</a>
+                <a href="#faq" class="hover:text-blue-500">FAQ</a>
+            </nav>
+        </div>
+     </header>
+
+    <!-- Hero Section -->
+
+    <section class="relative bg-cover bg-center h-[calc(100vh-64px)] text-white flex flex-col item-centers justify-center text-center" style="background-image: url('https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg'); object-fit: cover;">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+            Join Our Premier Tech Event
+        </h1>
+        <p class="text-xl md:text-2xl mb-12">Learn. Connect. Innovate.</p>
+        <a href="" class="w-[30%] mx-auto bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full transition">
+            Register Now
+        </a>
+    </section>
+
+    <!-- Event Details Section -->
+     <section id="details" class="py-16 bg-gray-100">
+        <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h2 class="text-3xl font-bold mb-3">
+                    Event Details
+                </h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Date: July 20, 2025</li>
+                    <li>Location: Virtual & In-person</li>
+                    <li>Audience: Developers, Designers, Tech Enthusiasts</li>
+                    <li>Free & Paid Tickets Available</li>
+                 </ul>
+            </div>
+            <div>
+                <img src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg" alt="event" class="rounded-lg shadow" />
+            </div>
+        </div>
+     </section>
+
+     <!-- Speakers Section -->
+     <section id="speakers" class="py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h1 class="text-3xl font-bold mb-8 text-center">
+                Meet Our Speakers
+            </h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow p-4 text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" class="mx-auto h-48 w-48 rounded-full mb-4" alt="Speaker" />
+                    <h3 class="text-xl font-semibold">Emma</h3>
+                    <p class="text-sm text-gray-600">Rock Band, Chicago</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4 text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg" class="mx-auto h-48 w-48 rounded-full mb-4" alt="Speaker" />
+                    <h3 class="text-xl font-semibold">Lisha</h3>
+                    <p class="text-sm text-gray-600">AMD Club, Georgia</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4 text-center transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg" class="mx-auto h-48 w-48 rounded-full mb-4" alt="Speaker" />
+                    <h3 class="text-xl font-semibold">Anna</h3>
+                    <p class="text-sm text-gray-600">Victoria Palace, Sydney</p>
+                </div>
+            </div>
+        </div>
+     </section>
+
+</body>
+</html>
